@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Meu Treino - Best Student</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="meu-treino.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="workout-body">
+
+    <aside class="workout-sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-user-header">
+                <img class="user-avatar" src="https://via.placeholder.com/150/00E5FF/000000?text=PT">
+                <div class="user-meta">
+                    <p class="user-name">Nome do Aluno</p>
+                    <a href="perfildoAluno.html" class="edit-link">Editar Perfil</a>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="paginaAluno.html" class="nav-link">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"></path></svg>
+                    <span>Início</span>
+                </a>
+                <a href="telaTreinoAluno.html" class="nav-link active">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span>Meus Treinos</span>
+                </a>
+                <a href="perfildoAluno.html" class="nav-link">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>Meu Perfil</span>
+                </a>
+                <a href="#chatpersonal.html" class="nav-link chat-link">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.111A9.59 9.59 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    <span>Chat Personal</span>
+                    <span class="chat-badge">1</span>
+                </a>
+                <a href="paginaAluno.html" class="nav-link nav-back">
+                    <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4h-12"></path></svg>
+                    <span>Voltar</span>
+                </a>
+            </nav>
+        </div>
+        <a href="paginaAluno.html" class="nav-link nav-exit">
+            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4h-12"></path></svg>
+            <span>Sair</span>
+        </a>
+    </aside>
+
+    <main class="workout-main">
+        <header class="workout-header">
+            <div class="header-titles">
+                <h1 id="workout-day-title" class="workout-title">Treino A</h1>
+                <p id="workout-focus" class="workout-focus">Peito e Tríceps</p>
+            </div>
+            
+            <div class="timer-container">
+                <div class="timer-display-group">
+                    <p class="timer-label">Descanso</p>
+                    <p id="timer-display" class="timer-digits">00:00</p>
+                </div>
+                <button onclick="startRestTimer(60)" class="btn-timer-start">
+                    <svg class="icon-timer" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="workout-tabs-nav">
+            <button onclick="loadWorkout('A')" class="tab-btn active">Treino A</button>
+            <button onclick="loadWorkout('B')" class="tab-btn">Treino B</button>
+            <button onclick="loadWorkout('C')" class="tab-btn">Treino C</button>
+        </div>
+
+        <div id="exercise-list" class="exercise-scroll-area">
+            </div>
+
+        <footer class="workout-footer">
+            <button onclick="finishWorkout()" class="btn-finish-workout">Finalizar Treino</button>
+        </footer>
+    </main>
+
+    <script>
+        const workoutData = {
+            'A': {
+                title: 'Peito e Tríceps',
+                exercises: [
+                    { name: 'Supino Reto com Barra', sets: '4', reps: '8-12', weight: '30kg cada lado', rest: '60s', video: 'https://cdn.pixabay.com/video/2016/11/14/6363-191338545_tiny.mp4', technique: 'Pirâmide' },
+                    { name: 'Tríceps Pulley', sets: '3', reps: '15', weight: '40kg', rest: '45s', video: '', technique: 'Drop Set' }
+                ]
+            },
+            'B': { title: 'Costas e Bíceps', exercises: [] },
+            'C': { title: 'Pernas Completo', exercises: [] }
+        };
+
+        function loadWorkout(id) {
+            // UI de Abas
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const workout = workoutData[id];
+            document.getElementById('workout-day-title').innerText = `Treino ${id}`;
+            document.getElementById('workout-focus').innerText = workout.title;
+
+            const list = document.getElementById('exercise-list');
+            list.innerHTML = '';
+
+            workout.exercises.forEach((ex) => {
+                const card = document.createElement('div');
+                card.className = "exercise-card-wrapper";
+                
+                const videoHtml = ex.video 
+                    ? `<video src="${ex.video}" class="exercise-video" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>`
+                    : `<div class="no-video-placeholder">Sem Vídeo</div>`;
+
+                card.innerHTML = `
+                    <label class="exercise-label">
+                        <input type="checkbox" class="check-done-input">
+                        <div class="exercise-card-body">
+                            <div class="exercise-video-box">
+                                ${videoHtml}
+                            </div>
+
+                            <div class="exercise-info">
+                                <div class="exercise-card-header">
+                                    <h3 class="exercise-name">${ex.name}</h3>
+                                    ${ex.technique ? `<span class="technique-badge">${ex.technique}</span>` : ''}
+                                </div>
+
+                                <div class="exercise-stats-grid">
+                                    <div class="stat-box">
+                                        <span class="stat-title">Séries</span>
+                                        <span class="stat-data">${ex.sets}</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-title">Reps</span>
+                                        <span class="stat-data">${ex.reps}</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-title">Carga</span>
+                                        <span class="stat-data highlight">${ex.weight}</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-title">Descanso</span>
+                                        <span class="stat-data">${ex.rest}</span>
+                                    </div>
+                                </div>
+
+                                <div class="exercise-progress-row">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar-fill"></div>
+                                    </div>
+                                    <span class="progress-text">Concluído</span>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        let timerInterval;
+        function startRestTimer(seconds) {
+            clearInterval(timerInterval);
+            let time = seconds;
+            const display = document.getElementById('timer-display');
+            
+            timerInterval = setInterval(() => {
+                const mins = Math.floor(time / 60);
+                const secs = time % 60;
+                display.innerText = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+                
+                if (time <= 0) {
+                    clearInterval(timerInterval);
+                    display.classList.add('pulse-alert');
+                } else {
+                    display.classList.remove('pulse-alert');
+                    time--;
+                }
+            }, 1000);
+        }
+
+        function finishWorkout() {
+            alert("Parabéns! Treino finalizado e salvo no seu histórico.");
+            window.location.href = 'pgaluno.html';
+        }
+
+        window.onload = () => loadWorkout('A');
+    </script>
+</body>
+</html>

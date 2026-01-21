@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <title>Crie sua conta - BestPersonal Pro</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+    <video autoplay muted loop id="fullscreen-video" class="video-bg">
+        <source src="images/Criação_de_Vídeo_Concluída.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="fixed-brand">
+        <a href="index.html" class="brand-link">
+            <div class="brand-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <span class="brand-text">BestPersonal<span>Pro</span></span>
+        </a>
+    </div>
+
+    <div class="form-container-scroll">
+        <div class="glass-form-card">
+            
+            <h2 class="form-title">Crie sua conta</h2>
+
+            <form class="auth-form" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Nome completo</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required placeholder="Seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail profissional</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="email-confirm">Repita seu E-mail</label>
+                    <input id="email-confirm" name="email-confirm" type="email" autocomplete="email" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Celular</label>
+                    <input id="phone" name="phone" type="tel" required placeholder="exemplo: (11) 99999-9999">
+                </div>
+
+                <div class="form-group">
+    <label for="password">Senha</label>
+    <div class="password-wrapper">
+        <input id="password" name="password" type="password" autocomplete="new-password" required placeholder="Mínimo 8 caracteres">
+        <button type="button" class="eye-button toggle-password" aria-label="Mostrar senha">
+            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="password-confirm">Repita sua senha</label>
+    <div class="password-wrapper">
+        <input id="password-confirm" name="password-confirm" type="password" autocomplete="new-password" required placeholder="Mínimo 8 caracteres">
+        <button type="button" class="eye-button toggle-password" aria-label="Mostrar senha">
+            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+        </button>
+    </div>
+    <p class="input-hint">Mínimo 8 caracteres.</p>
+</div>
+
+                <div class="checkbox-group">
+                    <input id="terms" name="terms" type="checkbox" required>
+                    <label for="terms">
+                        Eu concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Criar minha conta</button>
+            </form> 
+
+            <div class="bpp-registration-footer">
+                <span class="footer-text">Já tem uma conta?</span>
+                <a href="prelogin.html" class="footer-link-action">Faça login aqui</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

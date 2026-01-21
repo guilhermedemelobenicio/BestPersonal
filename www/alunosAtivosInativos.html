@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <title>Meus Alunos - Best Personal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Corpo da página com layout de aplicativo (sidebar + conteúdo) -->
+<body class="app-body">
+
+    <!-- Botão para abrir menu lateral no mobile -->
+    <button id="mobile-menu-btn" class="btn-mobile-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+
+    <!-- Barra lateral (Sidebar) com navegação -->
+    <aside id="sidebar-menu" class="sidebar">
+        <div>
+            <!-- Cabeçalho do perfil na sidebar -->
+            <div class="profile-header">
+                <img class="profile-img" src="https://via.placeholder.com/150/00E5FF/000000?text=PT" alt="Foto do Personal">
+                <div class="profile-info">
+                    <p>Nome Personal</p>
+                    <a href="perfileditpersonal.html">Ver Perfil</a>
+                </div>
+            </div>
+            
+            <!-- Links de navegação do menu -->
+            <nav class="nav-menu">
+                <a href="paginaPersonal.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"></path></svg>
+                    <span>Início</span>
+                </a>
+                
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                    <span>Biblioteca</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.111A9.59 9.59 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    <span>Chat</span>
+                    <span class="badge">3</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.405L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                    <span>Notificações</span>
+                </a>
+                
+                <a href="#" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                    <span>Assinatura</span>
+                </a>
+
+                <a href="cadastroAluno.html" class="nav-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>Adicionar Aluno</span>
+                </a>
+            </nav>
+        </div>
+        
+        <!-- Botão de Sair (Logout) -->
+        <a href="pgpersonal.html" class="btn-logout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 16l4-4m0 0l-4-4m4 4h-12"></path></svg>
+            <span>Sair</span>
+        </a>
+    </aside>
+
+    <!-- Conteúdo principal da página (lado direito da sidebar) -->
+    <main class="main-content">
+        
+        <!-- Cabeçalho da página interna -->
+        <header class="page-header">
+            <div class="header-title">
+                <h1>Gerenciar Alunos</h1>
+                <p>Visualize e gerencie o progresso dos seus clientes.</p>
+            </div>
+            
+            <!-- Ações do cabeçalho: Busca e Botão Novo Aluno -->
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar aluno...">
+                    <div class="search-icon">
+                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                </div>
+
+                <a href="cadastroAluno.html" class="btn-new-student">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <span>Novo Aluno</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Grid que divide os alunos em colunas (Ativos / Inativos) -->
+        <div class="students-grid-container">
+
+            <!-- Coluna de Alunos Ativos -->
+            <section class="student-column">
+                <div class="column-header">
+                    <span class="status-dot green"></span>
+                    <h2>Alunos Ativos (3)</h2>
+                </div>
+
+                <div class="cards-list">
+                    <!-- Card de Aluno Individual -->
+                    <div class="student-card active-card">
+                        <img class="student-avatar green-border" src="https://via.placeholder.com/150/1a2333/FFFFFF?text=A1" alt="Aluno">
+                        <div class="student-info">
+                            <h3>João Silva</h3>
+                            <p>Hipertrofia • <span class="text-green">Treino A</span></p>
+                        </div>
+                        <a href="#" class="btn-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="student-card active-card">
+                        <img class="student-avatar green-border" src="https://via.placeholder.com/150/1a2333/FFFFFF?text=A2" alt="Aluno">
+                        <div class="student-info">
+                            <h3>Maria Oliveira</h3>
+                            <p>Emagrecimento • <span class="text-green">Treino C</span></p>
+                        </div>
+                        <a href="#" class="btn-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="student-card active-card">
+                        <img class="student-avatar green-border" src="https://via.placeholder.com/150/1a2333/FFFFFF?text=A3" alt="Aluno">
+                        <div class="student-info">
+                            <h3>Pedro Santos</h3>
+                            <p>Condicionamento • <span class="text-green">Treino B</span></p>
+                        </div>
+                        <a href="#" class="btn-icon">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coluna de Alunos Inativos/Pendentes -->
+            <section class="student-column">
+                <div class="column-header">
+                    <span class="status-dot red"></span>
+                    <h2>Inativos / Pendentes (2)</h2>
+                </div>
+
+                <div class="cards-list">
+                    <div class="student-card inactive-card">
+                        <img class="student-avatar red-border grayscale" src="https://via.placeholder.com/150/1a2333/FFFFFF?text=IN" alt="Aluno">
+                        <div class="student-info">
+                            <h3 class="text-gray">Carlos Ferreira</h3>
+                            <p class="text-red font-bold">Pagamento Pendente</p>
+                        </div>
+                        <button class="btn-outline red">Ver</button>
+                    </div>
+
+                    <div class="student-card inactive-card dashed-border">
+                        <div class="student-avatar-placeholder">
+                            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </div>
+                        <div class="student-info">
+                            <h3 class="text-gray">Novo Cadastro</h3>
+                            <p class="text-muted">Aguardando Avaliação</p>
+                        </div>
+                        <button class="btn-outline gray">Aceitar</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

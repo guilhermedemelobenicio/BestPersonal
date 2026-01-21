@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <title>Planos e Preços - BestPersonal</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="planos.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="page-planos">
+    
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <span class="logo-text">Best<span class="highlight">Personal</span></span>
+                </a>
+            </div>
+            
+            <div class="nav-links desktop-only">
+                <a href="index.html#funcionalidades" class="nav-item">Funcionalidades</a>
+                <a href="index.html#recrutamento" class="nav-item">Seja Parceiro</a>
+                <a href="planospg.html" class="nav-item active">Planos</a> 
+                <a href="prelogin.html" class="btn-login">Login</a>
+                <a href="cadastro.html" class="btn-cta">Testar Grátis</a>
+            </div>
+
+            <div class="mobile-only">
+                <button id="mobile-menu-btn" class="btn-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-menu-content">
+                <a href="index.html#funcionalidades">Funcionalidades</a>
+                <a href="index.html#recrutamento">Seja Parceiro</a>
+                <a href="planos.html" class="active">Planos</a>
+                <button class="text-link">Login</button>
+                <button class="btn-cta-full">Começar Teste Grátis</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title">Invista na sua Carreira. <span class="highlight">Escale seus Resultados.</span></h1>
+            <p class="hero-subtitle">Escolha o plano ideal para o seu momento e comece a transformar a gestão dos seus alunos hoje mesmo.</p>
+            
+            <div class="toggle-container">
+                <span class="toggle-label">Mensal</span>
+                <button class="toggle-switch">
+                    <div class="toggle-circle"></div>
+                </button>
+                <span class="toggle-label active">Anual <span class="discount">(Economize 20%)</span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="pricing-section">
+        <div class="container pricing-grid">
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3 class="plan-name">Inicial</h3>
+                    <p class="plan-description">Para quem está começando a organizar sua carteira de alunos.</p>
+                </div>
+                <div class="card-price">
+                    <span class="price">Gratis</span>
+                    <span class="period">/mês</span>
+                </div>
+                <ul class="features-list">
+                    <li><span class="check-icon">✓</span> 02 Alunos gratuito</li>
+                    <li><span class="check-icon">✓</span> Prescrição de Treinos Ilimitada</li>
+                    <li><span class="check-icon">✓</span> App do Aluno</li>
+                    <li class="disabled"><span class="cross-icon">✕</span> Gestão Financeira</li>
+                </ul>
+                <button class="btn-outline">Começar Grátis</button>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="badge">MAIS POPULAR</div>
+                <div class="card-header">
+                    <h3 class="plan-name">Profissional</h3>
+                    <p class="plan-description">A escolha ideal para personal trainers em crescimento.</p>
+                </div>
+                <div class="card-price">
+                    <span class="price">R$29,99</span>
+                    <span class="period">/mês</span>
+                </div>
+                <ul class="features-list">
+                    <li><span class="check-icon">✓</span> Até 50 Alunos</li>
+                    <li><span class="check-icon">✓</span> Tudo do Plano Inicial</li>
+                    <li><span class="check-icon">✓</span> Gestão Financeira Completa</li>
+                    <li><span class="check-icon">✓</span> Relatórios de Performance</li>
+                </ul>
+                <button class="btn-cta">Criar Conta Profissional</button>
+            </div>
+
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3 class="plan-name">Elite</h3>
+                    <p class="plan-description">Para consultorias consolidadas e com grande volume de alunos.</p>
+                </div>
+                <div class="card-price">
+                    <span class="price">R$39,99</span>
+                    <span class="period">/mês</span>
+                </div>
+                <ul class="features-list">
+                    <li><span class="check-icon">✓</span> Alunos Ilimitados</li>
+                    <li><span class="check-icon">✓</span> Tudo do Plano Profissional</li>
+                    <li><span class="check-icon">✓</span> Domínio Personalizado</li>
+                    <li><span class="check-icon">✓</span> Suporte Prioritário</li>
+                </ul>
+                <button class="btn-outline">Criar Conta Elite</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container-small">
+            <div class="section-header text-center">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Tire suas dúvidas sobre os planos da BestPersonal.</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Posso trocar de plano depois?</span>
+                        <svg class="chevron" fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sim, você pode fazer upgrade ou downgrade do seu plano a qualquer momento diretamente pelo seu painel administrativo. A mudança é imediata e o valor será ajustado na próxima fatura.</p>
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Como funciona o plano gratuito?</span>
+                        <svg class="chevron" fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Você pode utilizar a plataforma gratuitamente para gerenciar até 2 alunos, com acesso à prescrição ilimitada de treinos e ao App do Aluno. Não é necessário cadastrar cartão de crédito para começar a organizar sua consultoria.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon-small">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <span class="footer-logo-text">BestPersonal</span>
+                </div>
+                <p class="footer-tagline">Plataforma líder em gestão e prescrição de treinos.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Produto</h4>
+                <ul>
+                    <li><a href="#funcionalidades">Funcionalidades</a></li>
+                    <li><a href="#">App do Aluno</a></li>
+                    <li><a href="planospg.html" class="active-link">Planos e Preços</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#">Blog e Dicas</a></li>
+                    <li><a href="#">Comunidade PT</a></li>
+                    <li><a href="#">Ajuda e Suporte</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                &copy; 2026 BestPersonal Systems. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

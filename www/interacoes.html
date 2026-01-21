@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <title>Interações - Perfil Best</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <button id="btn-toggle-menu" class="mobile-menu-toggle">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <aside id="sidebar-menu" class="sidebar">
+        <div class="sidebar-top">
+            <div class="user-profile">
+                <img class="user-avatar" src="https://via.placeholder.com/150/00E5FF/000000?text=PT" alt="Foto">
+                <div class="user-info">
+                    <p class="user-name">Nome Personal</p>
+                    <a href="perfileditpersonal.html" class="link-profile">Ver Perfil</a>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="paginaPersonal.html" class="nav-link">
+                    <span class="icon-container"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"></path></svg></span>
+                    <span>Início</span>
+                </a>
+                
+                <a href="#" class="nav-link">
+                    <span class="icon-container"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg></span>
+                    <span>Biblioteca</span>
+                </a>
+
+                <a href="#" class="nav-link active">
+                    <span class="icon-container"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.111A9.59 9.59 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></span>
+                    <span>Chat</span>
+                    <span class="badge-count">3</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <span class="icon-container"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.405L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg></span>
+                    <span>Notificações</span>
+                </a>
+                
+                <a href="assinaturapers.html" class="nav-link">
+                    <span class="icon-container"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg></span>
+                    <span>Assinatura</span>
+                </a>
+
+                <a href="cadastroAluno.html" class="nav-link">
+                    <span class="icon-container"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></span>
+                    <span>Adicionar Aluno</span>
+                </a>
+            </nav>
+        </div>
+        
+        <a href="prelogin.html" class="logout-link">
+            <span class="icon-container"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4h-12"></path></svg></span>
+            <span>Sair</span>
+        </a>
+    </aside>
+
+    <main class="main-content">
+        <div class="tab-container">
+            <button class="tab-btn active" data-target="chat-content">Chat com Alunos</button>
+            <button class="tab-btn" data-target="notif-content">Notificações</button>
+        </div>
+
+        <div id="chat-content" class="tab-panel active">
+            <div class="chat-layout">
+                <aside class="chat-list">
+                    <div class="student-chat-item active" data-name="João Silva">
+                        <img src="https://via.placeholder.com/40/00E5FF/000" alt="Avatar">
+                        <div class="chat-info">
+                            <p class="chat-name">João Silva</p>
+                            <p class="chat-preview">Professor, já fiz o treino A!</p>
+                        </div>
+                    </div>
+                    <div class="student-chat-item" data-name="Maria Clara">
+                        <img src="https://via.placeholder.com/40/FFD600/000" alt="Avatar">
+                        <div class="chat-info">
+                            <p class="chat-name">Maria Clara</p>
+                            <p class="chat-preview">Dúvida no agachamento...</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <section class="chat-window">
+                    <header class="chat-header">
+                        <h3 id="current-chat-name">João Silva</h3>
+                    </header>
+                    <div class="chat-messages" id="chat-scroll">
+                        <div class="bubble received">Bom dia, mestre! O treino de hoje está liberado?</div>
+                        <div class="bubble sent">Bom dia! Está focado em força, prepare o fôlego! 🔥</div>
+                    </div>
+                    <div class="chat-input-box">
+                        <input type="text" id="input-msg" placeholder="Escreva para o aluno...">
+                        <button id="btn-send-msg">Enviar</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="notif-content" class="tab-panel">
+            <div class="notifications-list">
+                <div class="notif-card unread">
+                    <div class="notif-icon green">✓</div>
+                    <div class="notif-text">
+                        <p><strong>João Silva</strong> concluiu o Treino A - Hipertrofia.</p>
+                        <span>há 5 minutos</span>
+                        <div style="margin-top: 10px;">
+                            <a href="verTreinoAluno.html" class="btn-action-small">Ver Treino</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notif-card">
+                    <div class="notif-icon cyan">!</div>
+                    <div class="notif-text">
+                        <p>Lembrete: Atualize a biblioteca de exercícios para a nova temporada.</p>
+                        <span>há 2 horas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

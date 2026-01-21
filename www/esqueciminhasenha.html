@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha - Best Personal</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .step { display: none; }
+        .step.active { display: block; }
+        .input-code { text-align: center; letter-spacing: 10px; font-size: 1.5rem; font-weight: bold; }
+    </style>
+</head>
+<body class="login-body">
+
+    <img src="images/fundo esteira.png" alt="Fundo Academia" class="video-bg">
+    <div class="video-overlay"></div>
+ <div class="fixed-brand">
+            <a href="index.html" class="brand-link">
+                <div class="brand-icon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <span class="brand-text">BestPersonal<span>Pro</span></span>
+            </a>
+        </div>
+    <div class="login-container">
+        <div class="glass-effect">
+            <h2 class="login-title">Recuperar<span>Senha</span></h2>
+            
+            <div id="step1" class="step active">
+                <p class="login-subtitle">Digite seu e-mail para receber o código.</p>
+                <div class="form-group">
+                    <label for="recovery-email">E-mail cadastrado</label>
+                    <input id="recovery-email" type="email" placeholder="seu@email.com">
+                    
+                </div>
+                <button type="button" onclick="handleNextStep(2)" class="btn-submit">Enviar Código</button>
+                <div class="login-footer" style="margin-top: 30px; text-align: center;">
+    <a href="prelogin.html" style="color: #00d4ff; text-decoration: none;">Voltar para a escolha de perfil</a>
+</div>
+            </div>
+
+            
+
+           <div id="step2" class="step">
+    <p class="login-subtitle">Insira o código enviado ao seu e-mail.</p>
+    <div class="form-group">
+        <label for="auth-code">Código de Verificação</label>
+        <input id="auth-code" type="text" class="input-code" maxlength="6" placeholder="000000">
+    </div>
+    <button type="button" onclick="handleNextStep(3)" class="btn-submit">Validar Código</button>
+    
+    <div class="resend-container" style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
+        <p id="timer-text" style="opacity: 0.8;">Reenviar código em <span id="timer">60</span>s</p>
+        <button id="resend-btn" type="button" onclick="resendCode()" style="display: none; background: none; border: none; color: #00d4ff; cursor: pointer; font-weight: bold; text-decoration: underline;">
+            Reenviar código
+        </button>
+        <div class="login-footer" style="margin-top: 30px; text-align: center;">
+    <a href="prelogin.html" style="color: #00d4ff; text-decoration: none;">Voltar para a escolha de perfil</a>
+</div>
+    </div>
+</div>
+
+
+            <div id="step3" class="step">
+    
+    <p class="login-subtitle">Crie sua nova senha de acesso.</p>
+    
+    <div class="form-group">
+        <label for="new-password">Nova Senha</label>
+        <div class="password-wrapper">
+        
+            <input id="password" type="password" placeholder="Digite a nova senha">
+            <button type="button" class="eye-button toggle-password" data-target="new-password">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="form-group" style="margin-top: 1rem;">
+        <label for="confirm-password">Confirmar Senha</label>
+        <div class="password-wrapper">
+        
+            <input id="password-confirm" type="password" placeholder="Repita a nova senha">
+            <button type="button" class="eye-button toggle-password" data-target="confirm-password">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+        </div>
+        <p class="input-hint" style="font-size: 0.75rem; opacity: 0.7; margin-top: 5px;">Mínimo 8 caracteres.</p>
+    </div>
+
+    <button type="button" onclick="handleFinishReset()" class="btn-submit" style="margin-top: 20px;">
+        Salvar Senha
+    </button>
+    <div class="login-footer" style="margin-top: 30px; text-align: center;">
+    <a href="prelogin.html" style="color: #00d4ff; text-decoration: none;">Voltar para a escolha de perfil</a>
+</div>
+    
+    <span id="password-error" style="color: #ff4d4d; font-size: 0.75rem; display: none; margin-top: 10px; font-weight: 600; text-align: center;">As senhas não coincidem</span>
+</div>
+</div>
+    
+</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

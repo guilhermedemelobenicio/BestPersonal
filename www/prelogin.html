@@ -1,0 +1,74 @@
+<!-- Define o tipo de documento como HTML5 -->
+<!DOCTYPE html>
+<!-- Início do documento HTML, definindo o idioma como Português do Brasil -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ícone que aparece na aba do navegador -->
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <title>Crie sua conta - BestPersonal Pro</title>
+    
+    <!-- Importação da fonte 'Inter' do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Link para o arquivo de estilos CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Corpo da página com classe específica para estilização de login -->
+<body class="login-body">
+
+    <!-- Vídeo de fundo: toca sozinho (autoplay), sem som (muted) e em loop -->
+    <video autoplay muted loop id="fullscreen-video" class="video-bg">
+        <source src="images/Criação_de_Vídeo_Concluída.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <!-- Camada escura sobre o vídeo para melhorar a leitura do texto -->
+    <div class="video-overlay"></div>
+
+    <!-- Logo fixa no canto superior esquerdo -->
+    <div class="fixed-brand">
+        <a href="index.html" class="brand-link">
+            <div class="brand-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <span class="brand-text">BestPersonal<span>Pro</span></span>
+        </a>
+    </div>
+
+    <!-- Container centralizado do formulário/escolha -->
+    <div class="login-container">
+        <!-- Card com efeito de vidro (glassmorphism) -->
+        <div class="login-card glass-effect">
+            
+            <h2 class="login-title">
+                Escolha seu perfil
+            </h2>
+            
+            <!-- Botões para escolher entre Personal ou Aluno -->
+            <div class="choice-buttons">
+                <a href="loginpersonal.html" class="btn-choice">
+                    PersonalBest
+                </a>
+                
+                <a href="loginAluno.html" class="btn-choice">
+                    AlunoBest
+                </a>
+            </div>
+
+            <!-- Linha divisória visual -->
+            <div class="divider"></div>
+
+            <!-- Rodapé do card com link para cadastro -->
+            <div class="login-footer">
+                <p>Seja Best</p>
+                <a href="cadastro.html">Cadastre-se aqui</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
